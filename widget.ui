@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_10">
+  <layout class="QVBoxLayout" name="verticalLayout_6">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
@@ -46,6 +46,20 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="pushButtonGetImageFromNet">
+         <property name="text">
+          <string>网络获取图片</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonSaveImg">
+         <property name="text">
+          <string>保存图片</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -61,7 +75,7 @@
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_6">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
@@ -92,34 +106,6 @@
           </layout>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout">
-           <item>
-            <widget class="QLabel" name="label_7">
-             <property name="text">
-              <string>色阶图</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="labelImgLevels">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>TextLabel</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
             <widget class="QLabel" name="label_8">
@@ -147,72 +133,96 @@
           </layout>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_3">
-           <item>
-            <widget class="QLabel" name="label_9">
-             <property name="text">
-              <string>色阶图</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="labelBitLevels">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>TextLabel</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <layout class="QVBoxLayout" name="verticalLayout"/>
          </item>
         </layout>
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="4">
-          <widget class="QSpinBox" name="spinBoxInMax"/>
-         </item>
-         <item row="0" column="3">
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>输入最大</string>
+         <item row="0" column="2">
+          <widget class="QSpinBox" name="spinBoxRGB">
+           <property name="maximum">
+            <number>500</number>
+           </property>
+           <property name="value">
+            <number>380</number>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
+         <item row="1" column="5">
           <widget class="QLabel" name="label_3">
            <property name="text">
             <string>输出最小</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="2">
-          <widget class="QSpinBox" name="spinBoxOutMin"/>
-         </item>
          <item row="1" column="4">
-          <widget class="QSpinBox" name="spinBoxOutMax"/>
-         </item>
-         <item row="1" column="3">
-          <widget class="QLabel" name="label_4">
-           <property name="text">
-            <string>输出最大</string>
+          <widget class="QSpinBox" name="spinBoxB">
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>123</number>
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
+         <item row="0" column="4">
+          <widget class="QSpinBox" name="spinBoxR">
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>123</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="8">
+          <widget class="QSpinBox" name="spinBoxInMax">
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>130</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
           <widget class="QLabel" name="label">
            <property name="text">
             <string>输入最小</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="2">
-          <widget class="QSpinBox" name="spinBoxInMin"/>
+         <item row="0" column="7">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>输入最大</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="7">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>输出最大</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QSpinBox" name="spinBoxInMin">
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>130</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>RGB</string>
+           </property>
+          </widget>
          </item>
          <item row="0" column="0">
           <spacer name="horizontalSpacer">
@@ -227,6 +237,101 @@
            </property>
           </spacer>
          </item>
+         <item row="1" column="6">
+          <widget class="QSpinBox" name="spinBoxOutMin"/>
+         </item>
+         <item row="1" column="8">
+          <widget class="QSpinBox" name="spinBoxOutMax"/>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>B</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>G</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QSpinBox" name="spinBoxG">
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>128</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>R</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QComboBox" name="comboBoxData1"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButtonDel1">
+           <property name="text">
+            <string>删除</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QComboBox" name="comboBoxData2"/>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="pushButtonDel2">
+           <property name="text">
+            <string>删除</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QScrollArea" name="scrollAreaData1">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_6">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>191</width>
+              <height>104</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item row="1" column="2" colspan="2">
+          <widget class="QScrollArea" name="scrollAreaData2">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_7">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>191</width>
+              <height>104</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+         </item>
         </layout>
        </item>
       </layout>
@@ -239,15 +344,12 @@
           <layout class="QVBoxLayout" name="verticalLayout_8">
            <item>
             <widget class="QScrollArea" name="scrollAreaOneChar1">
-             <property name="widgetResizable">
-              <bool>true</bool>
-             </property>
              <widget class="QWidget" name="scrollAreaWidgetContents_2">
               <property name="geometry">
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>172</width>
+                <width>152</width>
                 <height>119</height>
                </rect>
               </property>
@@ -259,15 +361,12 @@
            </item>
            <item>
             <widget class="QScrollArea" name="scrollAreaOneChar2">
-             <property name="widgetResizable">
-              <bool>true</bool>
-             </property>
              <widget class="QWidget" name="scrollAreaWidgetContents_4">
               <property name="geometry">
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>172</width>
+                <width>152</width>
                 <height>118</height>
                </rect>
               </property>
@@ -283,15 +382,12 @@
           <layout class="QVBoxLayout" name="verticalLayout_7">
            <item>
             <widget class="QScrollArea" name="scrollAreaOneChar3">
-             <property name="widgetResizable">
-              <bool>true</bool>
-             </property>
              <widget class="QWidget" name="scrollAreaWidgetContents_3">
               <property name="geometry">
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>171</width>
+                <width>152</width>
                 <height>119</height>
                </rect>
               </property>
@@ -303,15 +399,12 @@
            </item>
            <item>
             <widget class="QScrollArea" name="scrollAreaOneChar4">
-             <property name="widgetResizable">
-              <bool>true</bool>
-             </property>
              <widget class="QWidget" name="scrollAreaWidgetContents_5">
               <property name="geometry">
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>171</width>
+                <width>152</width>
                 <height>118</height>
                </rect>
               </property>
@@ -369,7 +462,7 @@
    <item>
     <widget class="QScrollArea" name="scrollArea">
      <property name="widgetResizable">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <property name="geometry">
@@ -386,6 +479,36 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>lineEditOneChar1</tabstop>
+  <tabstop>lineEditOneChar2</tabstop>
+  <tabstop>lineEditOneChar3</tabstop>
+  <tabstop>lineEditOneChar4</tabstop>
+  <tabstop>pushButtonSaveOneChar</tabstop>
+  <tabstop>spinBoxRGB</tabstop>
+  <tabstop>spinBoxB</tabstop>
+  <tabstop>spinBoxR</tabstop>
+  <tabstop>spinBoxInMax</tabstop>
+  <tabstop>spinBoxInMin</tabstop>
+  <tabstop>spinBoxOutMin</tabstop>
+  <tabstop>spinBoxOutMax</tabstop>
+  <tabstop>spinBoxG</tabstop>
+  <tabstop>comboBoxData1</tabstop>
+  <tabstop>pushButtonDel1</tabstop>
+  <tabstop>comboBoxData2</tabstop>
+  <tabstop>pushButtonDel2</tabstop>
+  <tabstop>scrollAreaData1</tabstop>
+  <tabstop>scrollAreaData2</tabstop>
+  <tabstop>scrollAreaOneChar1</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>scrollAreaOneChar2</tabstop>
+  <tabstop>pushButtonToBit</tabstop>
+  <tabstop>scrollAreaOneChar3</tabstop>
+  <tabstop>pushButtonOPen</tabstop>
+  <tabstop>scrollAreaOneChar4</tabstop>
+  <tabstop>pushButtonGetImageFromNet</tabstop>
+  <tabstop>pushButtonSaveImg</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
